@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+
+{%block title_pagina %}
+<title> Ver Mascotas </title>
+{% endblock title_pagina %}
+
+{%block mi_contenido%}
+<li class="nav-item"><a class="nav-link" href={% url 'index' %}>Index</a></li>
+<p> Listado de mascotas: </p>
+
+<form action={% url 'ver_mascotas' %} method="GET">
+    {{formulario}}
+    <button>Buscar</button>
+</form>
+<p>
+    {% for mascota in mascotas %}
+    <li>{{mascota.nombre}} {{mascota.duenio}} {{mascota.edad}}</li>
+    {%endfor%}
+</p>
+{%endblock mi_contenido %}
