@@ -3,7 +3,8 @@ B. Se tiens centralizados todos los templates en una carpeta templates, en la ca
    - Para los templates, se tiene un template "padre", llamado base.html. En él, se encuentra el formato común para todos los demás templates, los cuales "heredan" del padre en el espacio:
         {% block mi_contenido %}
         {% endblock mi_contenido %}
-   - En el template ver mascotas se incluye un buscador. Así mismo, se incluye la opción de editar los datos de la base de datos.
+   - Se usan clases basadas en vista para generar los views.
+   - En el template ver_mascotas_cbv se incluye un buscador. Así mismo, se incluye la opción de editar y de eliminar los datos de la base de datos.
 C. Se descargó una plantilla de startbootstrap, y se guardó en la subcarpeta static, dentro de home.
 D. Para los formularios, se optó por crear una clase en forms, no en models. Así mismo, se usa la API de django para formularios, en vez de programar desde html.
 
