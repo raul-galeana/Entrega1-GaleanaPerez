@@ -14,7 +14,11 @@
 </form>
 <p>
     {% for mascota in mascotas %}
-    <li>{{mascota.nombre}} {{mascota.duenio}} {{mascota.edad}}</li>
+    <li>
+        {{mascota}}
+    </li>
+    <a href={% url 'editar_mascota' mascota.id %}>Editar</a>
+    <a href={% url 'eliminar_mascota' mascota.id %}>Eliminar</a>
     {%endfor%}
 </p>
 {%endblock mi_contenido %}

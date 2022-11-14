@@ -1,17 +1,17 @@
 {%extends 'base.html'%}
 
 {%block title_pagina %}
-<title> Alta Mascota </title>
+<title> Editar Mascota </title>
 {% endblock title_pagina %}
 
 {%block mi_contenido%}
 <li class="nav-item"><a class="nav-link" href={% url 'index' %}>Index</a></li>
-<p> Da de alta a la mascota: </p>
-<form action={% url 'alta_mascota' %} method="POST">
+<form action={% url 'editar_mascota' mascota.id %} method="POST">
     {% csrf_token %}
     <table>
-        {{formulario}}
+        {{form}}
     </table>
-    <button>Crear</button>
+    <button>Editar</button>
 </form>
 {%endblock mi_contenido%}
+

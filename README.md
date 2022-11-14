@@ -1,8 +1,15 @@
-Se tiene una sola app home
-Se tienes centralizados todos los templates en una carpeta templates, en la carpeta principal.
-Dentro de home tenemos el views, urls y forms que son útiles para correr el programa.
-Se descargó una plantilla de startbootstrap, y se guardó en la subcarpeta static, dentro de home.
+A. Se tiene una sola app home, dentro de la cual se contiene forms, models, urls y views.
+B. Se tiens centralizados todos los templates en una carpeta templates, en la carpeta principal.
+   - Para los templates, se tiene un template "padre", llamado base.html. En él, se encuentra el formato común para todos los demás templates, los cuales "heredan" del padre en el espacio:
+        {% block mi_contenido %}
+        {% endblock mi_contenido %}
+   - En el template ver mascotas se incluye un buscador. Así mismo, se incluye la opción de editar los datos de la base de datos.
+C. Se descargó una plantilla de startbootstrap, y se guardó en la subcarpeta static, dentro de home.
+D. Para los formularios, se optó por crear una clase en forms, no en models. Así mismo, se usa la API de django para formularios, en vez de programar desde html.
 
-Se optó por crear una clase en forms, no en models. Así mismo, se usa la API de django para formularios, en vez de programar desde html.
+En la página web, se cuenta con un inicio o home, una página para ver mascotas (con buscador) y otra para crearlas / darlas de alta.
 
-Se hizo la prueba de cambiar la imagen de fondo para contextualizar que se trata de una guardería de mascotas, sin éxito. Se deja imagen de lentes, cartera, etc.
+--------------------------------------------
+Integrantes del grupo:
+1. Raúl Galeana
+2. Yesica Perez
